@@ -37,10 +37,11 @@ class Trend
         return new static($model::query());
     }
 
-    public function between($start, $end): self
+    public function between($start, $end, $dateColumn): self
     {
         $this->start = $start;
         $this->end = $end;
+        $this->dateColumn = $dateColumn;
 
         return $this;
     }
